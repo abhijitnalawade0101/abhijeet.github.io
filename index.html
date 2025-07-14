@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Abhijeet Nalawade Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+<script>
+  function toggleDescription(id, link) {
+    const desc = document.getElementById(id);
+    if (desc.style.display === "none") {
+      desc.style.display = "block";
+      link.textContent = "Read less";
+    } else {
+      desc.style.display = "none";
+      link.textContent = "Read more";
+    }
+  }
+</script>
+
+
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Abhijeet Nalawade</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#achievement-section" class="nav-link"><span>Achievements</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+			  
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div style="display:grid;place-items:center;height:100vh;">
+				<div style="width:700px;height:600px;background:url('images/home.jpg') center/cover no-repeat;">
+				</div>
+				</div>
+
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Abhijeet Nalawade</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						
+						'Site Reliability Engineer  ',
+						'Devops   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2> </h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p>
+						<a href="path/to/Abhijeet_Nalawade_CV.pdf" download class="btn btn-primary py-3 px-4">Download CV</a> 
+						<a href="https://github.com/abhijitnalawade0101" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+						
+						</p>
+
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/home1.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Abhijeet Nalawade</span></p>
+										<p><span class="title-s">Job Role: </span> <span>software engineer</span></p>
+										<p><span class="title-s">Experience: </span> <span>2 Years </span></p>
+										<p><span class="title-s">Address: </span> <span>Pune, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<h3><p class="title-s">Skills & Tools </p></h3>
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Kubernets</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Jenkins</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Docker</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Shell Scripting</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Git and Github</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>AWS</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Teraform</span> <span class="pull-right">10%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>JavaScript</span> <span class="pull-right">10%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Hi there! I’m a DevOps Engineer and Site Reliability Engineer (SRE) with a strong focus on automation, cloud infrastructure, and system reliability.
+									I work daily with tools like Docker, Kubernetes, and AWS, helping teams build, deploy, and monitor scalable applications. I enjoy writing shell scripts to automate tasks, manage containerized workloads, and improve system performance.
+									Currently, I support multiple enterprise-level products, monitor system health using Instana and Sysdig, and help resolve DB2-related issues on Linux environments. I also work on creating worker pools, setting up private endpoints (CSE), and ensuring everything runs smoothly through CI/CD pipelines.
+									I believe in continuous learning, strong documentation, and building systems that are fast, reliable, and easy to maintain.</p>
+								<section >
+								<h3>🔧 What I Do</h3>
+								<ul>
+									<li>Manage and maintain <strong>Kubernetes clusters</strong> for high availability</li>
+									<li><strong>Kubernets:</strong> Manage storage PV, PVC, StorageClasses,Ran and monitored various recipes and Set up and manage private service endpoints (CSE) in Kubernetes</li>
+									<li>Monitor systems with <strong> CHAI, OCM, PagerDuty, Flex Control Center, Instana, and Sysdig</strong></li>
+									<li>Handle <strong>incident response</strong> and integrate with <strong>ServiceNow</strong></li>	
+									<li>Collaborate using <strong>Git and GitHub</strong></li>
+									<li>Contribute to disaster recovery and automation planning</li>
+									<li>Support and manage four products: db2oc, dv, db2oc v3, warehouse, and warehouse v3</li>
+									<li>Jenkins: Create new worker pools for customer nodes as part of scaling and infrastructure setup</li>
+									<li>Write shell scripts to automate daily tasks and Strong knowledge on Linux.</li>
+									<li>Participate in SRE automation development, recently contributing to features</li>
+								</ul>
+								</section>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/abhijeet-nalawade-8432a8222/" target="_blank" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>DevOps and Site Reliability Engineer with 2 years of hands-on experience in managing Kubernetes clusters, automating infrastructure using Ansible and shell scripting, and deploying scalable applications on AWS. Proficient in CI/CD, cloud-native tools, and system monitoring with a strong focus on reliability, performance, and automation.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-Present</span>
+						<h2>software engineer</h2>
+						<span class="position">Persistent Systems</span>
+						
+							<ul>								
+								<li>Manage and maintain <strong>Kubernetes clusters</strong> for high availability</li>
+								<li><strong>Kubernets:</strong> Manage storage PV, PVC, StorageClasses,Ran and monitored various recipes and Set up and manage private service endpoints (CSE) in Kubernetes</li>
+								<li>Monitor systems with <strong> CHAI, OCM, PagerDuty, Flex Control Center, Instana, and Sysdig</strong></li>
+								<li>Handle <strong>incident response</strong> and integrate with <strong>ServiceNow</strong></li>	
+								<li>Collaborate using <strong>Git and GitHub</strong></li>
+								<li>Contribute to disaster recovery and automation planning</li>
+								<li>Support and manage four products: db2oc, dv, db2oc v3, warehouse, and warehouse v3</li>
+								<li>Jenkins: Create new worker pools for customer nodes as part of scaling and infrastructure setup</li>
+								<li>Write shell scripts to automate daily tasks and Strong knowledge on Linux.</li>
+								<li>Participate in SRE automation development, recently contributing to features</li>					
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan 2023 — june 2023</span>
+						<h2>Software Engineer Intern</h2>
+						<span class="position">Persistent Systems</span>
+						<span class="position"><strong>Role:</strong> Python Developer</span>
+						<p class="mt-4"> 
+							<ul>
+								<li>Gained hands-on experience in designing, developing, and managing databases</li>
+								<li>Developed and executed shell scripts to automate repetitive data processing tasks</li>
+								<li>Worked with popular Python libraries such as Pandas, NumPy, and Matplotlib for data manipulation and visualization</li>
+								<li>Implemented basic REST APIs using Python frameworks like Flask for internal tools</li>
+								<li>Collaborated with the team in an Agile environment using tools like Git and Jira</li>
+							</ul>
+							<div class="row justify-content-center mt-5">
+								<div class="col-md-6 text-center ftco-animate">
+									<p><a href="pdf/certificate.pdf" download class="btn btn-primary py-3 px-4">Experience certificate</a></p>
+								</div>
+							</div>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019-2023</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">SKN sinhgad college of Engineering Korti Pandharpur</span>
+    					<p class="mt-4">
+							Grade: <strong>'O'</strong> Grade.&nbsp;&nbsp;&nbsp;SGPA: <strong>'9.86'</strong>
+						</p>
+						
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2019</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">New English School and Jr. college Sangola</span>
+    					<p class="mt-4">Marks: <strong>82.46%</strong></p>
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2016-2017</span>
+    					<h2>Secondary School (10th) </h2>
+    					<p class="mt-4">Marks: <strong>91%</strong></p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="path/to/Abhijeet_Nalawade_CV.pdf" download class="btn btn-primary py-3 px-4">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the Some DevOps Project.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/abhijitnalawade0101/AI-voice-Assistant" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project2.jpeg'); ">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://github.com/abhijitnalawade0101/AI-voice-Assistant" target="_blank">AI Voice Assistant with FastAPI</a></h3>
+                <p>An intelligent voice-activated desktop assistant built using FastAPI, speech recognition, text-to-speech, and various automation utilities</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Data Analysis using Python Project for Beginners</a></h3>
+                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Power BI Sales dashboard Project for Beginners</a></h3>
+                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+              </div>
+            </div>
+           </div>
+        </div>
+	  </div>
+    </section>
+
+
+
+	<section class="ftco-section" id="achievement-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Achievements</h1>
+						<h2 class="mb-4">Achievements</h2>
+						<p>Below are my certifications, awards, and recognitions from various platforms and organizations.</p>
+					</div>
+				</div>
+
+				<!-- certifiacate Section -->
+				
+				<div class="row justify-content-center text-center">
+					<div class="col-md-12">
+						<h3 class="section-title">Certificate</h3>
+						<div class="underline"></div>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<!-- Certificate 1 -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/certificate1.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer"
+							style="background-image: url('images/certificate1.png'); height: 150px; background-size: contain; background-repeat: no-repeat; background-position: center;">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="https://www.credly.com/badges/fd28435b-8736-4563-85e6-618a9e5f3b17/public_urls" target="_blank" style="color: white;">
+								AWS Cloud Practitioner
+								</a>
+							</h6>
+							<p id="cert-desc-1" style="display: none;">
+								Issued by Amazon Web Services Training and Certification. Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud.
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-1', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/Gen_AI.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+							<img src="images/Gen_AI.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="AWS Certificate">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="images/Gen_AI.png" target="_blank" style="color: white;">
+								Gen_AI foundation
+								</a>
+							</h6>
+							<p id="cert-desc-2" style="display: none;">
+								Issued by Persistent Systems <br>Completed Gen AI Foundation certification with hands-on experience in Amazon CodeWhisperer and prompt engineering, gaining foundational skills in generative AI for real-world development
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-2', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/sre.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+							<img src="images/sre.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="AWS Certificate">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="images/sre.png" target="_blank" style="color: white;">
+								Site Reliability Engineer (SRE)
+								</a>
+							</h6>
+							<p id="cert-desc-3" style="display: none;">
+								Issued by Persistent System. <br>Earned through hands-on labs and assessments focused on core SRE principles.
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-3', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/Python_certificate.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+							<img src="images/Python_certificate.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="AWS Certificate">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="images/Python_certificate.png" target="_blank" style="color: white;">
+								Python jr. Developer
+								</a>
+							</h6>
+							<p id="cert-desc-4" style="display: none;">
+								Issued by Persistent System. <br>Completed Python certification with hands-on experience in scripting, data handling, automation, and problem-solving using core Python concepts.
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-4', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/aws jr dev.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+							<img src="images/aws jr dev.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="AWS Certificate">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="images/aws jr dev.png" target="_blank" style="color: white;">
+								AWS Cloud Engineer (Infra) Jr. Developer
+								</a>
+							</h6>
+							<p id="cert-desc-5" style="display: none;">
+								Issued by Persistent System. <br>Completed AWS Cloud Engineer (Infra) Jr. Developer certification with practical knowledge of core AWS services, infrastructure setup, EC2, S3, IAM, and basic DevOps practices.
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-5', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/kubernets_ibm.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+							<img src="images/kubernets_ibm.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="AWS Certificate">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="images/kubernets_ibm.png" target="_blank" style="color: white;">
+								Containers & Kubernetes Essentials
+								</a>
+							</h6>
+							<p id="cert-desc-6" style="display: none;">
+								Issued by IBM. <br> This badge earner is able to build and run a container image and understands Kubernetes architecture.
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-6', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end" style="max-width: 300px;">
+							<a href="images/docker_ibm.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+							<img src="images/docker_ibm.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="AWS Certificate">
+							</a>
+							<div class="text mt-3 float-right d-block">
+							<h6>
+								<a href="images/docker_ibm.png" target="_blank" style="color: white;">
+								Docker Essentials: A Developer Introduction
+								</a>
+							</h6>
+							<p id="cert-desc-7" style="display: none;">
+								Issued by IBM. <br> Earned by gaining knowledge of Docker containers, their benefits, and basic orchestration.Learned to run and create containers using Docker Hub.
+							</p>
+							<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-7', this)">Read more</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<!-- awards section -->
+				<div class="row justify-content-center text-center">
+					<div class="col-md-12">
+						<h3 class="section-title">Awards</h3>
+						<div class="underline"></div>
+					</div>
+				</div>
+				<br>
+				<div class="row">	
+					<!-- Awards 1 -->
+						<div class="col-md-4 d-flex ftco-animate">
+							<div class="blog-entry justify-content-end" style="max-width: 300px;">
+								<a href="images/awards_2.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+								<img src="images/awards_2.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="Bravo Award">
+								</a>
+								<div class="text mt-3 float-right d-block">
+								<h6>
+									<a href="images/awards_2.png" target="_blank" style="color: white;">
+									Bravo Team Award
+									</a>
+								</h6>
+								<p id="cert-desc-8" style="display: none;">
+									Issued by Persistent Systems. Received for effectively handling critical incidents, improving processes, and mentoring new team members to adapt quickly.
+								</p>
+								<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-8', this)">Read more</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Awards 2 -->
+						<div class="col-md-4 d-flex ftco-animate">
+							<div class="blog-entry justify-content-end" style="max-width: 300px;">
+								<a href="images/awards_1.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+								<img src="images/awards_1.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="Bravo Award">
+								</a>
+								<div class="text mt-3 float-right d-block">
+								<h6>
+									<a href="images/awards_1.png" target="_blank" style="color: white;">
+									Hive Five Individual Award
+									</a>
+								</h6>
+								<p id="cert-desc-9" style="display: none;">
+									Issued by Persistent Systems. Received the Hive Five Individual Award for demonstrating dedication and maintaining high standards that created a lasting, positive impact. Recognized for setting a remarkable example of excellence and teamwork, contributing meaningfully to team success and collaboration.
+								</p>
+								<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-9', this)">Read more</a>
+								</div>
+							</div>
+						</div>
+
+				</div>
+
+				<div class="row justify-content-center text-center">
+					<div class="col-md-12">
+						<h3 class="section-title">Experience Certifiacate</h3>
+						<div class="underline"></div>
+					</div>
+				</div>
+				<br>
+				<div class="row">	
+					<!-- Experienece 1 -->
+						<div class="col-md-4 d-flex ftco-animate">
+							<div class="blog-entry justify-content-end" style="max-width: 300px;">
+								<a href="images/experience1.png" class="block-20 zoom-effect" target="_blank" rel="noopener noreferrer">
+								<img src="images/experience1.png" class="img-fluid" style="max-height: 150px; width: auto;" alt="Bravo Award">
+								</a>
+								<div class="text mt-3 float-right d-block">
+								<h6>
+									<a href="images/experience1.png" target="_blank" style="color: white;">
+									Software Engineer Intern
+									</a>
+								</h6>
+								<p id="cert-desc-10" style="display: none;">
+									Issued by Persistent system. <br>Earned through experience as a Python Developer at Persistent Systems, Gained hands-on skills in Flask, shell scripting, REST APIs, and data analysis using Pandas, NumPy, and Matplotlib in an Agile setup.
+								</p>
+								<a href="javascript:void(0);" onclick="toggleDescription('cert-desc-10', this)">Read more</a>
+								</div>
+							</div>
+						</div>
+				</div>
+				<br>
+				
+
+			</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Skill</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span>Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/background2.jpg)">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<!-- <div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4> -->
+						<br>
+						<p><a href="https://github.com/abhijitnalawade0101" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Pune, Maharashtra, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 8459370710</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:abhijitnalawade0101@gmail.com">abhijitnalawade0101@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/abhijeet-nalawade-8432a8222" target="_blank"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/abhijeet_nalawade_2081/" target="_blank"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+    </section>
+
+ 
+	
+   <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |
+	&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This portfolio and its content are the property of <strong>Abhijeet Nalawade</strong>. Unauthorized use, reproduction, or distribution is strictly prohibited.
+
+
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
